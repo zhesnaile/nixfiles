@@ -11,6 +11,7 @@
       ./hardware-configuration.nix
       ./laptop/import.nix
       ./secrets.nix
+      ./cachix.nix
     ];
 
   # Set your time zone.

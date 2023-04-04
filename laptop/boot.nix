@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   # Bootloader.
@@ -9,6 +9,9 @@
 
   boot.initrd.systemd.enable = true;
   boot.plymouth.enable = true;
+
+  # Kernel Version
+  boot.kernelPackages = pkgs.linuxPackages_6_1;
 
   # Kernel Modules
   boot.extraModulePackages = with config.boot.kernelPackages; [ tuxedo-keyboard ];
@@ -21,5 +24,4 @@
     "tuxedo_keyboard.state=0"
     "quiet"
   ];
-
 }
