@@ -21,6 +21,7 @@ in
       ghostscript
       zsh
       fd
+      fzf
       ripgrep
       cpustat
       tealdeer
