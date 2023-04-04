@@ -8,7 +8,10 @@
   programs.steam = {
     enable = true;
   };
+
   programs.ssh.startAgent = true;
+
+  programs.zsh.enable = true;
 
   fonts.fonts = with pkgs; [
     noto-fonts
