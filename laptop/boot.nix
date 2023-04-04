@@ -11,7 +11,7 @@
   boot.plymouth.enable = true;
 
   # Kernel Version
-  boot.kernelPackages = pkgs.linuxPackages_6_1;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Kernel Modules
   boot.extraModulePackages = with config.boot.kernelPackages; [ tuxedo-keyboard ];
