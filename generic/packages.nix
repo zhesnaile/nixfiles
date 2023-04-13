@@ -13,6 +13,8 @@
 
   programs.zsh.enable = true;
 
+  programs.dconf.enable = true;
+
   fonts.fonts = with pkgs; [
     noto-fonts
     noto-fonts-cjk
@@ -29,6 +31,7 @@
     htop
     curl
     wget
+    virt-manager
     #gnome.gnome-tweaks
     gnumake
     gcc

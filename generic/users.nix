@@ -8,7 +8,7 @@ in
     isNormalUser = true;
     description = "bali";
     shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; with mypkgs; [
       firefox
       brave
