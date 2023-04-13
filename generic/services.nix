@@ -4,16 +4,17 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
-
-  # Configure keymap in X11
+  # xorg related settings
   services.xserver = {
+    enable = true;
     layout = "es";
+    xkbOptions = "ctrl:nocaps shift:both_capslock";
+
+    displayManager.sddm.enable = true;
+    desktopManager.plasma5.enable = true;
+
+    libinput.enable = true;
+    libinput.touchpad.disableWhileTyping = true;
   };
 
   #Enable libvirtd
