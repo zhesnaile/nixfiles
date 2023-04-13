@@ -13,8 +13,9 @@ in
       firefox
       brave
       vscodium
-      discord-ptb
+      discord
       spotify
+      gimp
       keepassxc
       kitty
       ark
