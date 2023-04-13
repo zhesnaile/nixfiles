@@ -9,11 +9,17 @@
     enable = true;
   };
 
+  # ssh agent
   programs.ssh.startAgent = true;
 
+  # zsh shell
   programs.zsh.enable = true;
 
+  # dconf, needed for virt-manager
   programs.dconf.enable = true;
+
+  # kde connect
+  programs.kdeconnect.enable = true;
 
   fonts.fonts = with pkgs; [
     noto-fonts
@@ -23,15 +29,22 @@
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 
+  # exclude packages bundled with kde
+  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+    elisa
+    oxygen
+    print-manager
+    plasma-browser-integration
+    konsole
+  ];
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
     neovim
     htop
     curl
     wget
     virt-manager
+    kate
     #gnome.gnome-tweaks
     gnumake
     gcc
