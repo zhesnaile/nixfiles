@@ -16,6 +16,7 @@ in
       discord
       spotify
       gimp
+      mpv
       keepassxc
       kitty
       ark
