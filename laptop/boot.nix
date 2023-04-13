@@ -12,9 +12,11 @@
 
   # Kernel Version
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelModules = [ "kvm-intel" ];
 
   # Kernel Modules
-  boot.extraModulePackages = with config.boot.kernelPackages; [ tuxedo-keyboard ];
+  boot.extraModulePackages = with config.boot.kernelPackages;
+    [ tuxedo-keyboard ];
   boot.kernelParams = [
     "tuxedo_keyboard.mode=0"
     "tuxedo_keyboard.color_left=0xEDEE0E"
