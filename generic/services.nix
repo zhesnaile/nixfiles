@@ -18,6 +18,9 @@
     libinput.touchpad.disableWhileTyping = true;
   };
 
+  # Flatpak
+  services.flatpak.enable = true;
+
   #Enable libvirtd
   virtualisation.libvirtd.enable = true;
 

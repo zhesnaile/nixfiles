@@ -13,7 +13,6 @@ in
       firefox
       brave
       vscodium
-      discord
       spotify
       gimp
       mpv
