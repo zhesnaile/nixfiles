@@ -6,5 +6,6 @@
       ./users.nix
       ./services.nix
       ./hardened.nix
+      ./command.nix
     ];
 }
