@@ -32,6 +32,7 @@ in
       pyright
       git
       haskell-language-server
+      mangohud
       terraform
       ansible
     ];
