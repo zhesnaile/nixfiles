@@ -21,6 +21,9 @@
   # kde connect
   programs.kdeconnect.enable = true;
 
+  # kde partition manager
+  programs.partition-manager.enable = true;
+
   fonts.fonts = with pkgs; [
     noto-fonts
     noto-fonts-cjk
