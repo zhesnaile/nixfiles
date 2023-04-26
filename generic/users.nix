@@ -32,6 +32,8 @@ in
       pyright
       git
       haskell-language-server
+      terraform
+      ansible
     ];
   };
 
