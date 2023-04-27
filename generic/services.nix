@@ -8,7 +8,7 @@
   services.xserver = {
     enable = true;
     layout = "es";
-    xkbOptions = "ctrl:nocaps shift:both_capslock";
+    xkbOptions = "ctrl:nocaps,shift:both_capslock";
 
     displayManager.sddm.enable = true;
     desktopManager.plasma5.enable = true;
