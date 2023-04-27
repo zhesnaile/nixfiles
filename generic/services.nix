@@ -21,14 +21,26 @@
   # Flatpak
   services.flatpak.enable = true;
 
-  # Enable libvirtd
-  virtualisation.libvirtd.enable = true;
+  virtualisation = {
+    # Enable libvirtd
+    libvirtd = {
+      enable = true;
+      qemu.ovmf.enable = true;
+      onBoot = "ignore";
+      qemu.verbatimConfig = ''
+      user = "bali"
+      '';
+    };
 
-  # Enable podman
-  virtualisation.podman = {
-    enable = true;
-    dockerCompat = true;
+    # Enable podman
+    podman = {
+      enable = true;
+      dockerCompat = true;
+    };
   };
+
+
+  
 
   # Enable sound with pipewire.
   sound.enable = true;
