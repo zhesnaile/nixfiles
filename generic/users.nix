@@ -33,8 +33,6 @@ in
       git
       haskell-language-server
       mangohud
-      terraform
-      ansible
     ];
   };
 
