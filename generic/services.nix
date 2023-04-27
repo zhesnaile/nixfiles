@@ -21,8 +21,14 @@
   # Flatpak
   services.flatpak.enable = true;
 
-  #Enable libvirtd
+  # Enable libvirtd
   virtualisation.libvirtd.enable = true;
+
+  # Enable podman
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
 
   # Enable sound with pipewire.
   sound.enable = true;
