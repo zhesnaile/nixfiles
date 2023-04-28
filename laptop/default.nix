@@ -5,7 +5,7 @@
 
   imports =
     [
-      ../generic/import.nix
+      ../generic
       ./boot.nix
       ./nvidia_prime.nix
       ./services.nix
