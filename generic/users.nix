@@ -9,7 +9,9 @@ in
     description = "bali";
     shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
-    packages = with pkgs; with mypkgs; [
+    packages = with pkgs; with mypkgs;
+      ## GUI APPS
+      [
       firefox
       brave
       vscodium
@@ -19,20 +21,28 @@ in
       keepassxc
       kitty
       ark
-      ghostscript
+      mangohud
+      ]
+      ++
+      ## cli apps
+      [
       zsh
       fd
       fzf
       ripgrep
       cpustat
       tealdeer
+      git
+    ]
+    ++
+    ## dependencies
+    [
+      ghostscript
       lazygit
       rust-analyzer
       nodejs
       pyright
-      git
-      haskell-language-server
-      mangohud
+      xclip
     ];
   };
 
