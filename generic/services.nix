@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   # Enable networking
@@ -26,6 +26,8 @@
     libvirtd = {
       enable = true;
       qemu.ovmf.enable = true;
+      qemu.ovmf.packages = [ pkgs.OVMFFull.fd ];
+      qemu.swtpm.enable = true;
       onBoot = "ignore";
       qemu.verbatimConfig = ''
       user = "bali"
@@ -38,9 +40,6 @@
       dockerCompat = true;
     };
   };
-
-
-  
 
   # Enable sound with pipewire.
   sound.enable = true;
