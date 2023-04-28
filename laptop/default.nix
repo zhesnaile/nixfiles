@@ -9,5 +9,6 @@
       ./boot.nix
       ./nvidia_prime.nix
       ./services.nix
+      ../cachix.nix
     ];
 }
