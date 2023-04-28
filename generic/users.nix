@@ -10,8 +10,8 @@ in
     shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; with mypkgs;
-      ## GUI APPS
-      [
+    ## GUI APPS
+    [
       firefox
       brave
       vscodium
@@ -22,10 +22,11 @@ in
       kitty
       ark
       mangohud
-      ]
-      ++
-      ## cli apps
-      [
+      easyeffects
+    ]
+    ++
+    ## cli apps
+    [
       zsh
       fd
       fzf
