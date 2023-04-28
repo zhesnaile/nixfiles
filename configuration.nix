@@ -9,9 +9,8 @@
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./laptop/import.nix
-      ./secrets.nix
-      ./cachix.nix
+      ./desktop
+      ./secrets
     ];
 
   # Set your time zone.
