@@ -14,6 +14,7 @@ in
     [
       firefox
       brave
+      chromium
       vscodium
       spotify
       gimp
@@ -23,6 +24,11 @@ in
       ark
       mangohud
       easyeffects
+      rpcs3
+      ryujinx
+      dolphin-emu
+      ppsspp-qt
+      pcsx2
     ]
     ++
     ## cli apps
@@ -34,6 +40,8 @@ in
       cpustat
       tealdeer
       git
+      python3
+      poetry
     ]
     ++
     ## dependencies
