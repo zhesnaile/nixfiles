@@ -10,6 +10,11 @@
     ../mystuff
   ];
 
+  security.pam.loginLimits = [
+    {domain = "*";type = "-";item = "memlock";value = "infinity";}
+    {domain = "*";type = "-";item = "nofile";value = "65536";}
+  ];
+
   specialisation.vfio.configuration = {
     system.nixos.tags = [ "with-vfio" ];
     mystuff.vfio = {
