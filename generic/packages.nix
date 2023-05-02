@@ -53,5 +53,7 @@
     gcc
     killall
     cachix
+    podman-compose
+    nmon
   ];
 }
