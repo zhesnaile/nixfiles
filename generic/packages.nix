@@ -24,6 +24,9 @@
   # kde partition manager
   programs.partition-manager.enable = true;
 
+  # add development docs
+  # documentation.dev.enable = true;
+
   fonts.fonts = with pkgs; [
     noto-fonts
     noto-fonts-cjk
@@ -53,7 +56,9 @@
     gcc
     killall
     cachix
-    podman-compose
+    docker-compose
     nmon
+    man-pages
+    man-pages-posix
   ];
 }
