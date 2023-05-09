@@ -8,7 +8,7 @@ in
     isNormalUser = true;
     description = "bali";
     shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "docker" ];
     packages = with pkgs; with mypkgs;
     ## GUI APPS
     [

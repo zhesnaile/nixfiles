@@ -34,11 +34,8 @@
       '';
     };
 
-    # Enable podman
-    podman = {
-      enable = true;
-      dockerCompat = true;
-    };
+    # Enable docker
+    docker.enable = true;
   };
 
   # Enable sound with pipewire.
