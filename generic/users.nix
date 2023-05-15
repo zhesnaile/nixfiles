@@ -25,10 +25,10 @@ in
       mangohud
       easyeffects
       rpcs3
-      ryujinx
       dolphin-emu
       ppsspp-qt
       pcsx2
+      protonup-qt
     ]
     ++
     ## cli apps
