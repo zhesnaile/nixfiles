@@ -29,6 +29,7 @@ in
       ppsspp-qt
       pcsx2
       protonup-qt
+      gamescope
     ]
     ++
     ## cli apps
