@@ -12,7 +12,7 @@
 
   security.pam.loginLimits = [
     {domain = "*";type = "-";item = "memlock";value = "infinity";}
-    {domain = "*";type = "soft";item = "nofile";value = "65536";}
+    {domain = "*";type = "soft";item = "nofile";value = "524294";}
     {domain = "*";type = "hard";item = "nofile";value = "1048576";}
   ];
 
