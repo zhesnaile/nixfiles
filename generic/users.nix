@@ -42,7 +42,6 @@ in
       tealdeer
       git
       python3
-      poetry
     ]
     ++
     ## dependencies
@@ -53,6 +52,8 @@ in
       nodejs
       pyright
       xclip
+      p7zip
+      luajit
     ];
   };
 
