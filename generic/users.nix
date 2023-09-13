@@ -30,6 +30,7 @@ in
       pcsx2
       protonup-qt
       gamescope
+      libreoffice-qt
     ]
     ++
     ## cli apps
@@ -42,10 +43,16 @@ in
       tealdeer
       git
       python3
+      tmux
+      tmux-xpanes
     ]
     ++
     ## dependencies
     [
+      hunspell
+      hunspellDicts.es_ES
+      hunspellDicts.en_GB-ise
+      hunspellDicts.fr-any
       ghostscript
       lazygit
       rust-analyzer
