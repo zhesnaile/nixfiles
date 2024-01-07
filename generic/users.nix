@@ -7,7 +7,7 @@ in
   users.users.bali = {
     isNormalUser = true;
     description = "bali";
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "docker" ];
     packages = with pkgs; with mypkgs;
     ## GUI APPS
@@ -31,6 +31,7 @@ in
       protonup-qt
       gamescope
       libreoffice-qt
+      remmina
     ]
     ++
     ## cli apps
@@ -61,6 +62,8 @@ in
       xclip
       p7zip
       luajit
+      cowsay
+      fortune
     ];
   };
 
