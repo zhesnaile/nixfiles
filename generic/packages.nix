@@ -9,11 +9,16 @@
     enable = true;
   };
 
+  programs.gamemode.enable = true;
+
   # ssh agent
   programs.ssh.startAgent = true;
 
   # zsh shell
   programs.zsh.enable = true;
+
+  # fish shell
+  programs.fish.enable = true;
 
   # dconf, needed for virt-manager
   programs.dconf.enable = true;
