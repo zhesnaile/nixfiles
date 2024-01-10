@@ -64,9 +64,19 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
+  # Enable syncthing
+  services = {
+    syncthing = {
+        enable = true;
+        user = "bali";
+        dataDir = "/home/bali/Documents/syncthing";    # Default folder for new synced folders
+        configDir = "/home/bali/.config/syncthing";   # Folder for Syncthing's settings and keys
+    };
+  };
+
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ 80 ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 22000 ];
+  networking.firewall.allowedUDPPorts = [ 22000 21027 ];
   # Or disable the firewall altogether.
   networking.firewall = {
     # if packets are still dropped, they will show up in dmesg
