@@ -11,6 +11,7 @@
       ./hardware-configuration.nix
       ./desktop
       ./secrets
+      ./cachix.nix
     ];
 
   # Set your time zone.
