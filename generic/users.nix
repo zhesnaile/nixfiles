@@ -27,11 +27,13 @@ in
       rpcs3
       dolphin-emu
       ppsspp-qt
-      pcsx2
       protonup-qt
       gamescope
       libreoffice-qt
       remmina
+      blender
+      aseprite-unfree
+      godot_4
     ]
     ++
     ## cli apps
@@ -46,6 +48,10 @@ in
       python3
       tmux
       tmux-xpanes
+      terraform
+      ansible
+      tree
+      lm_sensors
     ]
     ++
     ## dependencies
