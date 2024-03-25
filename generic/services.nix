@@ -13,12 +13,13 @@
     };
 
     displayManager.sddm.enable = true;
-    desktopManager.plasma5.enable = true;
     displayManager.defaultSession = "plasma";
 
     libinput.enable = true;
     libinput.touchpad.disableWhileTyping = true;
   };
+
+  services.desktopManager.plasma6.enable = true;
 
   # Flatpak
   services.flatpak.enable = true;
