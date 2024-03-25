@@ -65,7 +65,8 @@ in
       rust-analyzer
       nodejs
       pyright
-      xclip
+      #xclip
+      wl-clipboard
       p7zip
       luajit
       cowsay
