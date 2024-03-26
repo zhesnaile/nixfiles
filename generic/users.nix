@@ -52,6 +52,8 @@ in
       ansible
       tree
       lm_sensors
+      dig
+      gh
     ]
     ++
     ## dependencies
