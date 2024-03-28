@@ -1,17 +1,33 @@
-{ config, pkgs, ... }:
+{ pkgs, config, ... }:
+
 let
-  mypkgs = import (fetchTarball "https://github.com/zhesnaile/nixpkgs/archive/main.tar.gz") { };
-in
-{
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  inherit (builtins) filter hasAttr readFile;
+  ifTheyExist = groups:
+    filter (group: hasAttr group config.users.groups) groups;
+in {
+  users.mutableUsers = true;
   users.users.bali = {
+    description = "crackhead";
     isNormalUser = true;
-    description = "bali";
+    #hashedPasswordFile = config.sops.secrets.bali-pw.path;
     shell = pkgs.fish;
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "docker" ];
-    packages = with pkgs; with mypkgs;
-    ## GUI APPS
-    [
+    extraGroups = [ "wheel" "video" "audio" ] ++ ifTheyExist [
+      "docker"
+      "input"
+      "libvirtd"
+      "network"
+      "networkmanager"
+      "wireshark"
+    ];
+
+    #openssh.authorizedKeys.keys = [ (readFile ../../../home/bali/ssh.pub) ];
+
+    packages = with pkgs; [
+      home-manager
+      insomnia
+      obsidian
+      slack
+      ## GUI APPS
       firefox
       brave
       chromium
@@ -32,7 +48,7 @@ in
       libreoffice-qt
       remmina
       blender
-      aseprite-unfree
+      libresprite
       godot_4
     ]
     ++
@@ -42,7 +58,7 @@ in
       fd
       fzf
       ripgrep
-      cpustat
+      #cpustat
       tealdeer
       git
       python3
@@ -76,4 +92,8 @@ in
     ];
   };
 
+  #sops.secrets.bali-pw.neededForUsers = true;
+
+  #home-manager.users.bali =
+  #  import ../../../home/bali/${config.networking.hostName}.nix;
 }
