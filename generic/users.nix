@@ -24,7 +24,6 @@ in
       ark
       mangohud
       easyeffects
-      rpcs3
       dolphin-emu
       ppsspp-qt
       protonup-qt
