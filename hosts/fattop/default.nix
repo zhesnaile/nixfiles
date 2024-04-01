@@ -11,6 +11,7 @@
       ./hardware-configuration.nix
       ./secrets
       ./boot.nix
+      ./nvidia_prime.nix
     ];
 
   base.enable = true;

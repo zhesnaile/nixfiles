@@ -4,10 +4,8 @@ let
   cfg = config.base;
   inherit (lib) mkIf mkDefault;
 in {
-  # options.base = { };
 
-  config = let
-  in mkIf cfg.enable {
+  config = mkIf cfg.enable {
     # enable polkit
     security.polkit.enable = true;
     # enable apparmor
@@ -21,20 +19,5 @@ in {
     # pwless sudo
     security.sudo.enable = true;
 
-    # increase open file limit for sudoers
-    security.pam.loginLimits = mkDefault [
-      {
-        domain = "@wheel";
-        item = "nofile";
-        type = "soft";
-        value = "524288";
-      }
-      {
-        domain = "@wheel";
-        item = "nofile";
-        type = "hard";
-        value = "1048576";
-      }
-    ];
   };
 }

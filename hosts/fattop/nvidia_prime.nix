@@ -22,12 +22,5 @@ in
     intelBusId = "PCI:0:2:0";
     nvidiaBusId = "PCI:1:0:0";
   };
-  # Reverse prime doesn't work, this generates an external display only config.
-  # specialisation = {
-  #   external-display.configuration = {
-  #     system.nixos.tags = [ "external-display" ];
-  #     hardware.nvidia.prime.offload.enable = lib.mkForce false;
-  #     hardware.nvidia.powerManagement.enable = lib.mkForce false;
-  #   };
-  # };
+
 }

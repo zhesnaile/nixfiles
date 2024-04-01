@@ -17,13 +17,16 @@
       flake = let lib = nixpkgs.lib // home-manager.lib;
       in {
         inherit lib;
+        nixosModules = import modules/nixos
 
         nixosConfigurations = {
           # main desktop
           hothead = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             modules = [
-              ./configuration.nix
+              ./hosts/hothead
+              self.nixosModules.base
+              self.nixosModules.desktop
 
               hardware.nixosModules.common-cpu-amd
               hardware.nixosModules.common-gpu-amd
