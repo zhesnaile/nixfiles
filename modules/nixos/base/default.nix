@@ -122,22 +122,13 @@ in {
     };
 
     console = {
-      keyMap = "es";
+      keyMap = mkDefault "es";
       useXkbConfig = true;
       earlySetup = mkDefault false;
     };
 
     # cachix-agent
     services.cachix-agent.enable = mkDefault true;
-
-    # auto upgrade if enabled
-    system.autoUpgrade = mkIf cfg.autoupdate {
-      enable = isClean;
-      dates = "daily";
-      flags = [ "--refresh" ];
-      flake = "github:zhesnaile/nixfiles#${hostName}";
-    };
-    
 
     # Only run if current config (self) is older than the new one.
     systemd.services.nixos-upgrade = lib.mkIf config.system.autoUpgrade.enable {

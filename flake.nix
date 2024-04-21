@@ -8,21 +8,26 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     flake-parts.url = "github:hercules-ci/flake-parts";
     hardware.url = "github:nixos/nixos-hardware";
+    sops-nix.url = "github:Mic92/sops-nix";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
 
-  outputs = inputs@{ self, nixpkgs, flake-parts, hardware, ... }:
+  outputs = inputs@{ self, nixpkgs, flake-parts, hardware, home-manager, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" ];
 
       flake = let lib = nixpkgs.lib // home-manager.lib;
       in {
         inherit lib;
-        nixosModules = import modules/nixos
+        nixosModules = import modules/nixos;
 
         nixosConfigurations = {
           # main desktop
           hothead = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
+            specialArgs = {
+              inherit inputs;
+            };
             modules = [
               ./hosts/hothead
               self.nixosModules.base
@@ -31,6 +36,8 @@
               hardware.nixosModules.common-cpu-amd
               hardware.nixosModules.common-gpu-amd
               hardware.nixosModules.common-pc-ssd
+              inputs.sops-nix.nixosModules.sops
+              inputs.nix-flatpak.nixosModules.nix-flatpak
             ];
           };
         };

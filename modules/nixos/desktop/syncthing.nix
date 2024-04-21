@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 let
   inherit (lib) mkIf mkDefault;
   cfg = config.desktop;

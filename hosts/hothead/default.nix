@@ -9,13 +9,21 @@
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./secrets
       ./boot.nix
+      ./sops.nix
     ];
 
   base.enable = true;
   desktop.enable = true;
 
+  desktop.flatpaks = [
+    "com.discordapp.Discord"
+    "com.heroicgameslauncher.hgl"
+    "io.dbeaver.DBeaverCommunity"
+    "md.obsidian.Obsidian"
+    "org.ryujinx.Ryujinx"
+    "org.prismlauncher.PrismLauncher"
+  ];
 
   system.stateVersion = "22.11";
 

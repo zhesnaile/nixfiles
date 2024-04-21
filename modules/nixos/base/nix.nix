@@ -1,4 +1,4 @@
-{ inputs, pkgs, lib, config, overlays, ... }:
+{ inputs, pkgs, lib, config, ... }:
 
 let
   inherit (lib) mkIf;
@@ -42,7 +42,6 @@ in {
     };
 
     nixpkgs = {
-      overlays = builtins.attrValues overlays;
       config = {
         allowUnfree = true;
         #permittedInsecurePackages = [ "electron-25.9.0" ];
