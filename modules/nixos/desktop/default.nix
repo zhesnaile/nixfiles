@@ -146,5 +146,15 @@ in {
     # environment.profileRelativeSessionVariables = {
     #   QT_PLUGIN_PATH = mkDefault [ "/lib/qt-6/plugins" ];
     # };
+    #
+    home-manager =
+    let
+      home-common = import ../../home-manager;
+      modules = builtins.attrValues home-common;
+    in
+    {
+      sharedModules = modules;
+      useGlobalPkgs = true;
+    };
   };
 }

@@ -37,6 +37,9 @@
               hardware.nixosModules.common-cpu-amd
               hardware.nixosModules.common-gpu-amd
               hardware.nixosModules.common-pc-ssd
+
+              home-manager.nixosModules.home-manager
+
               inputs.sops-nix.nixosModules.sops
               inputs.nix-flatpak.nixosModules.nix-flatpak
             ];

@@ -1,0 +1,3 @@
+{
+  cli = import ./cli;
+}

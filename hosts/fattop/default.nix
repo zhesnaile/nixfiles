@@ -14,9 +14,22 @@
       ./nvidia_prime.nix
     ];
 
-  base.enable = true;
-  desktop.enable = true;
+  base = {
+    enable = true;
+    hostname = "hothead";
+  };
 
+  desktop = {
+    enable = true;
+    flatpaks = [
+      "com.discordapp.Discord"
+      "com.heroicgameslauncher.hgl"
+      "io.dbeaver.DBeaverCommunity"
+      "com.spotify.Client"
+      "org.ryujinx.Ryujinx"
+      "org.prismlauncher.PrismLauncher"
+    ];
+  };
 
   system.stateVersion = "22.11";
 

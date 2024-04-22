@@ -94,6 +94,5 @@ in {
 
   #sops.secrets.bali-pw.neededForUsers = true;
 
-  #home-manager.users.bali =
-  #  import ../../../home/bali/${config.networking.hostName}.nix;
+  home-manager.users.bali = import ../../../home/bali/${config.networking.hostName}.nix;
 }
