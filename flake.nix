@@ -30,6 +30,7 @@
             };
             modules = [
               ./hosts/hothead
+              ./hosts/common
               self.nixosModules.base
               self.nixosModules.desktop
 

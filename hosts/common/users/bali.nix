@@ -7,7 +7,7 @@ let
 in {
   users.mutableUsers = true;
   users.users.bali = {
-    description = "crackhead";
+    description = "Carlos";
     isNormalUser = true;
     #hashedPasswordFile = config.sops.secrets.bali-pw.path;
     shell = pkgs.fish;
@@ -24,10 +24,10 @@ in {
 
     packages = with pkgs; [
       home-manager
-      insomnia
+      ## GUI APPS
+      hoppscotch
       obsidian
       slack
-      ## GUI APPS
       firefox
       brave
       chromium
@@ -49,6 +49,7 @@ in {
       blender
       libresprite
       godot_4
+      jellyfin-media-player
     ]
     ++
     ## cli apps

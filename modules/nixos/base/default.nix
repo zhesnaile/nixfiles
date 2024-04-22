@@ -127,9 +127,6 @@ in {
       earlySetup = mkDefault false;
     };
 
-    # cachix-agent
-    services.cachix-agent.enable = mkDefault true;
-
     # Only run if current config (self) is older than the new one.
     systemd.services.nixos-upgrade = lib.mkIf config.system.autoUpgrade.enable {
       serviceConfig.ExecCondition = lib.getExe
