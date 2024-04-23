@@ -44,6 +44,28 @@
               inputs.nix-flatpak.nixosModules.nix-flatpak
             ];
           };
+
+          fattop = nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
+            specialArgs = {
+              inherit inputs;
+            };
+            modules = [
+              ./hosts/fattop
+              ./hosts/common
+              self.nixosModules.base
+              self.nixosModules.desktop
+
+              hardware.nixosModules.common-cpu-intel
+              hardware.nixosModules.common-gpu-nvidia
+              hardware.nixosModules.common-pc-laptop-ssd
+
+              home-manager.nixosModules.home-manager
+
+              inputs.sops-nix.nixosModules.sops
+              inputs.nix-flatpak.nixosModules.nix-flatpak
+            ];
+          };
         };
       };
 

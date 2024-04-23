@@ -9,14 +9,13 @@
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./secrets
       ./boot.nix
       ./nvidia_prime.nix
     ];
 
   base = {
     enable = true;
-    hostname = "hothead";
+    hostname = "fattop";
   };
 
   desktop = {
