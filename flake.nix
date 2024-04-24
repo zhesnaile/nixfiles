@@ -10,6 +10,11 @@
     hardware.url = "github:nixos/nixos-hardware";
     sops-nix.url = "github:Mic92/sops-nix";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+    plasma-manager = {
+      url = "github:pjones/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, flake-parts, hardware, home-manager, ... }:
