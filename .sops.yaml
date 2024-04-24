@@ -1,0 +1,12 @@
+keys:
+  - &users:
+    - &bali age1wuaf8x726hgjp0vqvm9aa6cqrecmf6da5xfsa440vk7ayqwvsczs62fzl8
+  - &hosts:
+    - &hothead age1uyv5fzh7sythlhnhmc0aeltk4wfw6tvgkfdu4xlrkrjfze8aupysr4v5zv
+
+creation_rules:
+  - path_regex: hosts/hothead/secrets\.(ya?ml|json|env|ini)$
+    key_groups:
+      - age:
+          - *bali
+          - *hothead
