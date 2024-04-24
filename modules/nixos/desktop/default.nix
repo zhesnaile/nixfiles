@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }:
+{ inputs, pkgs, lib, config, ... }:
 
 let
   cfg = config.desktop;
@@ -49,6 +49,8 @@ in {
         man-pages-posix
         # other packages
         fontforge
+        via
+        vial
       ] ++ cfg.apps;
 
 
@@ -153,7 +155,7 @@ in {
       modules = builtins.attrValues home-common;
     in
     {
-      sharedModules = modules;
+      sharedModules = modules ++ [ inputs.plasma-manager.homeManagerModules.plasma-manager ];
       useGlobalPkgs = true;
     };
   };
