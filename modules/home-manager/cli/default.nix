@@ -6,6 +6,8 @@ let
 in {
   imports = [
     ./neovim.nix
+    ./fish.nix
+    ./programs.nix
   ];
 
   options.cli = let inherit (lib) mkEnableOption mkOption;
