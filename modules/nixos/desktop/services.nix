@@ -13,15 +13,18 @@ in {
           options = "ctrl:nocaps,shift:both_capslock";
       };
 
-      displayManager.sddm.enable = true;
-      displayManager.defaultSession = "plasma";
-
       libinput.enable = true;
       libinput.touchpad.disableWhileTyping = true;
     };
 
     services.desktopManager.plasma6.enable = true;
+    services.displayManager.sddm.enable = true;
+    services.displayManager.defaultSession = "plasma";
 
+    services.udev.packages = with pkgs; [
+      via
+      vial
+    ];
 
     # Enable sound with pipewire.
     sound.enable = true;
