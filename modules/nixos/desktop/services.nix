@@ -13,8 +13,11 @@ in {
           options = "ctrl:nocaps,shift:both_capslock";
       };
 
-      libinput.enable = true;
-      libinput.touchpad.disableWhileTyping = true;
+    };
+
+    services.libinput = {
+      enable = true;
+      touchpad.disableWhileTyping = true;
     };
 
     services.desktopManager.plasma6.enable = true;

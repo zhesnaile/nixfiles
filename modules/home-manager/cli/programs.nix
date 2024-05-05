@@ -119,6 +119,7 @@ in {
               set -g @dracula-plugins "cpu-usage ram-usage time"
             '';
           }
+          /*
           {
             plugin = resurrect;
             extraConfig = "set -g @resurrect-strategy-nvim 'session'";
@@ -126,10 +127,11 @@ in {
           {
             plugin = continuum;
             extraConfig = ''
-              set -g @continuum-restore 'on'
+              set -g @continuum-restore 'off'
               set -g @continuum-save-interval '60' # minutes
             '';
           }
+          */
         ];
 
         extraConfig = ''
