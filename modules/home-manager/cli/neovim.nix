@@ -53,7 +53,7 @@ in {
         rust-analyzer
         nodePackages.bash-language-server
         nodePackages.prettier
-        nodePackages.pyright
+        pyright
         nodePackages.typescript-language-server
         nodePackages.vls
         nodePackages.vscode-json-languageserver-bin
