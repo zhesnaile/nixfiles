@@ -86,6 +86,7 @@ in {
       #xclip
       wl-clipboard
       p7zip
+      unzip
       luajit
       cowsay
       fortune
