@@ -50,6 +50,8 @@ in {
       libresprite
       godot_4
       jellyfin-media-player
+      virt-manager
+      zed-editor
     ]
     ++
     ## cli apps
