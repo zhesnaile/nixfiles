@@ -128,7 +128,7 @@ in {
     hardware = {
       bluetooth.enable = mkDefault true;
       bluetooth.powerOnBoot = mkDefault true;
-      opengl.enable = mkDefault true;
+      graphics.enable = mkDefault true;
     };
 
     # audio config (pipewire)
