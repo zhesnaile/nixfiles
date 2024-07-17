@@ -56,8 +56,7 @@ in {
         pyright
         nodePackages.typescript-language-server
         nodePackages.vls
-        nodePackages.vscode-json-languageserver-bin
-        python311Packages.debugpy
+        python3Packages.debugpy
         ruff-lsp
         shfmt
         stylua

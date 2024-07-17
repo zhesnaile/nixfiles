@@ -190,11 +190,6 @@ in {
     programs = {
       bash = { enable = true; };
 
-      thefuck = {
-        enable = true;
-        # enableInstantMode = true;
-      };
-
       mcfly = {
         enable = true;
 
