@@ -46,12 +46,11 @@ in {
       gamescope
       libreoffice-qt
       remmina
-      blender
       libresprite
       godot_4
       jellyfin-media-player
       virt-manager
-      zed-editor
+      calibre
     ]
     ++
     ## cli apps
