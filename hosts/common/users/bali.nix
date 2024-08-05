@@ -51,6 +51,7 @@ in {
       jellyfin-media-player
       virt-manager
       calibre
+      rpcs3
     ]
     ++
     ## cli apps
@@ -71,6 +72,7 @@ in {
       lm_sensors
       dig
       gh
+      xxHash
     ]
     ++
     ## dependencies
