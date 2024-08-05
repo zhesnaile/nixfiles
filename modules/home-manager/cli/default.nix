@@ -67,7 +67,7 @@ in {
           nixd # nix LSP
           nixfmt-classic # nix formatter
           # nix-delegate # distributed nix builds transparently
-          nix-du # du for nix store
+          #nix-du # du for nix store
           nix-inspect # see which pkgs are in your PATH
           packagekit # package helper across distros
           pfetch # system info
