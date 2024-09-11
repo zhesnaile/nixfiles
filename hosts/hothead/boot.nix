@@ -2,7 +2,7 @@
 
 {
   # xpadneo
-  hardware.xpadneo.enable = true;
+  # hardware.xpadneo.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -16,5 +16,5 @@
 
   # Kernel Version
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelModules = [ "kvm-amd" "amdgpu" "hid_xpadneo" ];
+  boot.kernelModules = [ "kvm-amd" "amdgpu" ];
 }
