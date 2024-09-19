@@ -21,7 +21,6 @@
   desktop = {
     enable = true;
     flatpaks = [
-      "com.discordapp.Discord"
       "com.heroicgameslauncher.hgl"
       "io.dbeaver.DBeaverCommunity"
       "com.spotify.Client"

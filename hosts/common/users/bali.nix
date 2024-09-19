@@ -52,6 +52,7 @@ in {
       virt-manager
       calibre
       rpcs3
+      vesktop
     ]
     ++
     ## cli apps
