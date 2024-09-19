@@ -4,5 +4,6 @@
   home.stateVersion = "23.11";
   cli.enable = true;
   manage-plasma.enable = true;
-  home.packages = with pkgs; [ openconnect ];
+  gui.enable = true;
+  home.packages = with pkgs; [ ];
 }
