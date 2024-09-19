@@ -115,9 +115,10 @@ in {
       gamemode.enable = true;
       gnupg.agent.enable = true;
       kdeconnect.enable = mkDefault true;
-      #nix-ld.enable = mkDefault true;
+      nix-ld.enable = mkDefault true;
       partition-manager.enable = true;
       steam.enable = true;
+      hyprland.enable = true;
     };
 
     services = {
