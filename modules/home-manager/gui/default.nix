@@ -9,14 +9,7 @@ in {
   ];
   options.gui = let inherit (lib) mkEnableOption mkOption;
   in with lib.types; {
-    enable = lib.mkEnableOption "Enable desktop configuration";
-
-    packages = mkOption {
-      type = listOf package;
-      default = [ ];
-      description = "CLI packages to include";
-    };
+    enable = lib.mkEnableOption "Enable desktop GUI configuration";
   };
-
 }
 
