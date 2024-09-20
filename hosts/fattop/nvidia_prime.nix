@@ -12,13 +12,23 @@ in
 {
   environment.systemPackages = [ nvidia-offload ];
   services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia.modesetting.enable = true;
-  hardware.nvidia.powerManagement.enable = true;
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement = {
+      enable = true;
+      finegrained = true;
+    };
+    open = false;
+    nvidiaSettings = true;
+  };
+
 
   # hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
   hardware.nvidia.prime = {
-    offload.enable = true;
-    #sync.enable = true;
+    offload = {
+      enable = true;
+      enableOffloadCmd = true;
+    };
     intelBusId = "PCI:0:2:0";
     nvidiaBusId = "PCI:1:0:0";
   };
