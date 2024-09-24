@@ -56,10 +56,11 @@
     fastboi UUID=848c8d5c-dffa-4a01-9716-f8d81abcb41c /etc/nixos/secrets/fastboi.key luks
     bigboi UUID=38a57ba5-2b3a-4756-91d9-1d4d198f04a9 /etc/nixos/secrets/bigboi.key luks
     smallboi UUID=d5d794c9-5aed-49ea-9816-11bc66628679 /etc/nixos/secrets/smolerboi.key luks
+    gamelib UUID=929560de-31b3-4958-b310-ed97b3742e15 /etc/nixos/secrets/gamelib.key luks
     '';
     };
   system.activationScripts.makeMediaDirs = ''
-    mkdir -p /media/{fastboi,bigboi,smallboi}
+    mkdir -p /media/{fastboi,bigboi,smallboi,gamelib}
   '';
 
   fileSystems = {
@@ -76,6 +77,11 @@
     "/media/smallboi" = {
       device = "/dev/mapper/smallboi";
       fsType = "xfs";
+    };
+
+    "/media/gamelib" = {
+      device = "/dev/mapper/gamelib";
+      fsType = "ext4";
     };
   };
 }
