@@ -53,6 +53,7 @@ in {
       calibre
       rpcs3
       vesktop
+      wireshark-qt
     ]
     ++
     ## cli apps
@@ -74,6 +75,7 @@ in {
       dig
       gh
       xxHash
+      ani-cli
     ]
     ++
     ## dependencies
