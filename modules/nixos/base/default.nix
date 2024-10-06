@@ -70,6 +70,7 @@ in {
     services.zfs.autoSnapshot.enable = mkDefault cfg.fs.zfs;
     services.zfs.autoScrub.enable = mkDefault cfg.fs.zfs;
     services.geoclue2.enable = mkDefault true;
+    services.printing.enable = mkDefault false;
     i18n.defaultLocale = mkDefault "en_US.UTF-8";
     i18n.supportedLocales =
       mkDefault [ "es_ES.UTF-8/UTF-8" "en_US.UTF-8/UTF-8" ];

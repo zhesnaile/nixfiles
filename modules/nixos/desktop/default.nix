@@ -122,7 +122,6 @@ in {
     };
 
     services = {
-      printing.enable = mkDefault true;
       touchegg.enable = mkDefault cfg.isLaptop;
     };
 
