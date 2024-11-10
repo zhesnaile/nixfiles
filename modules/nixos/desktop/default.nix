@@ -102,7 +102,7 @@ in {
         })
         jetbrains-mono
         noto-fonts
-        noto-fonts-cjk
+        noto-fonts-cjk-sans
         noto-fonts-emoji
         noto-fonts-extra
       ];
@@ -118,7 +118,7 @@ in {
       nix-ld.enable = mkDefault true;
       partition-manager.enable = true;
       steam.enable = true;
-      hyprland.enable = true;
+      hyprland.enable = false;
     };
 
     services = {
