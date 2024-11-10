@@ -46,14 +46,16 @@ in {
       gamescope
       libreoffice-qt
       remmina
-      libresprite
-      godot_4
       jellyfin-media-player
       virt-manager
       calibre
       rpcs3
       vesktop
       wireshark-qt
+      handbrake
+      vbam
+      mgba
+      ryujinx
     ]
     ++
     ## cli apps
@@ -68,7 +70,7 @@ in {
       python3
       tmux
       tmux-xpanes
-      terraform
+      opentofu
       ansible
       tree
       lm_sensors
