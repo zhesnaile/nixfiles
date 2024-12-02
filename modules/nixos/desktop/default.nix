@@ -90,21 +90,18 @@ in {
 
       packages = with pkgs; [
         cantarell-fonts
-        (nerdfonts.override {
-          fonts = [
-            "FiraCode"
-            "Hack"
-            "Inconsolata"
-            "JetBrainsMono"
-            "NerdFontsSymbolsOnly"
-            "Noto"
-          ];
-        })
+        nerd-fonts.fira-mono
+        nerd-fonts.hack
+        nerd-fonts.inconsolata
+        nerd-fonts.jetbrains-mono
+        nerd-fonts.symbols-only
+        nerd-fonts.noto
         jetbrains-mono
         noto-fonts
         noto-fonts-cjk-sans
         noto-fonts-emoji
         noto-fonts-extra
+        liberation_ttf
       ];
     };
 

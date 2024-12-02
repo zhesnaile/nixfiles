@@ -23,7 +23,13 @@ in {
       noto-fonts-cjk-sans
       noto-fonts-extra
       noto-fonts-emoji
-      (nerdfonts.override { fonts = [ "FiraCode" ]; })
+      nerd-fonts.fira-mono
+      nerd-fonts.hack
+      nerd-fonts.inconsolata
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.symbols-only
+      nerd-fonts.noto
+      liberation_ttf
     ];
 
     environment.systemPackages = with pkgs; [
