@@ -40,7 +40,7 @@ in {
         shellcheck
 
         # language servers & mason binaries
-        buf-language-server
+        buf
         clang-tools
         deno
         docker-compose-language-service
