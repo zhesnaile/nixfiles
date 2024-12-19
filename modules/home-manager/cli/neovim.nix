@@ -55,7 +55,6 @@ in {
         nodePackages.prettier
         pyright
         nodePackages.typescript-language-server
-        nodePackages.vls
         python3Packages.debugpy
         ruff-lsp
         shfmt
