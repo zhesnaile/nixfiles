@@ -56,6 +56,7 @@ in {
       vbam
       mgba
       ryujinx
+      retroarch-full
     ]
     ++
     ## cli apps
