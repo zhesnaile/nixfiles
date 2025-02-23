@@ -50,7 +50,6 @@ in {
       virt-manager
       calibre
       rpcs3
-      vesktop
       wireshark-qt
       handbrake
       vbam
