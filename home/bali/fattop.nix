@@ -3,6 +3,10 @@
 {
   home.stateVersion = "23.11";
   cli.enable = true;
-  manage-plasma.enable = true;
+  gui = {
+    enable = true;
+    hyprland.enable = false;
+    plasma.enable = false;
+  };
   home.packages = with pkgs; [ openconnect ];
 }

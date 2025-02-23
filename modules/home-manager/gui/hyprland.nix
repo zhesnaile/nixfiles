@@ -2,7 +2,7 @@
 
 let
   inherit (lib) mkIf;
-  cfg = config.gui;
+  cfg = config.gui.hyprland;
 in {
   config = mkIf cfg.enable {
     wayland.windowManager.hyprland = {

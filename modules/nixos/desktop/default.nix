@@ -115,7 +115,6 @@ in {
       nix-ld.enable = mkDefault true;
       partition-manager.enable = true;
       steam.enable = true;
-      hyprland.enable = false;
     };
 
     services = {

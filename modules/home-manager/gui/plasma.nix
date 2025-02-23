@@ -2,10 +2,9 @@
 
 let
   inherit (lib) mkIf mkDefault;
-  cfg = config.manage-plasma;
+  cfg = config.gui;
 in {
-  options.manage-plasma.enable = lib.mkEnableOption "manage plasma config with Home-manager";
-  config = mkIf cfg.enable {
+  config = mkIf (cfg.enable && cfg.plasma.enable)  {
     programs.plasma = {
       enable = true;
       shortcuts = {
@@ -18,9 +17,6 @@ in {
         "kwin"."Window One Desktop Up" = "Meta+Ctrl+Shift+Up";
         "kwin"."Window One Desktop to the Left" = "Meta+Ctrl+Shift+Left";
         "kwin"."Window One Desktop to the Right" = "Meta+Ctrl+Shift+Right";
-        #"kdeglobals"."General"."BrowserApplication" = "firefox.desktop";
-        #"kdeglobals"."General"."TerminalApplication" = "kitty";
-        #"kdeglobals"."General"."TerminalService" = "kitty.desktop";
         "services/org.kde.spectacle.desktop"."ActiveWindowScreenShot" = "Meta+Print";
         "services/org.kde.spectacle.desktop"."FullScreenScreenShot" = "Shift+Print";
         "services/org.kde.spectacle.desktop"."CurrentMonitorScreenShot" = "Alt+Print";
