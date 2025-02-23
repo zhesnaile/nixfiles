@@ -127,17 +127,14 @@ in {
       graphics.enable = mkDefault true;
     };
 
-    # audio config (pipewire)
-    #sound.enable = true;
     security.rtkit.enable = true;
-    hardware.pulseaudio.enable = false;
+    services.pulseaudio.enable = false;
 
     services.pipewire = {
       enable = mkDefault true;
       alsa.enable = mkDefault true;
       alsa.support32Bit = mkDefault true;
       pulse.enable = mkDefault true;
-      # jack.enable = true;
     };
 
     # fix for qt6 plugins
