@@ -1,8 +1,6 @@
 { lib, config, pkgs, ... }:
 
 {
-  # xpadneo
-  # hardware.xpadneo.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

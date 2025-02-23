@@ -5,7 +5,6 @@ let
   cfg = config.desktop;
 in {
   config = mkIf cfg.enable {
-    # xorg related settings
     services.xserver = {
       enable = true;
       xkb = {
@@ -30,7 +29,6 @@ in {
       vial
     ];
 
-    # Enable sound with pipewire.
     security.rtkit.enable = true;
     services.pipewire = {
       enable = true;
@@ -40,21 +38,11 @@ in {
 
     };
 
-    # Enable bluetooth
     hardware.bluetooth.enable = true;
 
-    # Enable CUPS to print documents.
     services.printing.enable = false;
 
-    # Enable the OpenSSH daemon.
-    # services.openssh.enable = true;
-
-    # Open ports in the firewall.
-    #networking.firewall.allowedTCPPorts = [ ];
-    #networking.firewall.allowedUDPPorts = [ ];
-    # Or disable the firewall altogether.
     networking.firewall = {
-      # if packets are still dropped, they will show up in dmesg
       logReversePathDrops = true;
       # wireguard trips rpfilter up
       extraCommands = ''

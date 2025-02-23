@@ -4,18 +4,14 @@ let
   cfg = config.base;
 in {
   config = mkIf cfg.enable {
-    # Install Steam
     programs.steam = {
       enable = true;
     };
 
-    # ssh agent
     programs.ssh.startAgent = true;
 
-    # zsh shell
     programs.zsh.enable = true;
 
-    # fish shell
     programs.fish.enable = true;
 
     fonts.packages = with pkgs; [

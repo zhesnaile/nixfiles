@@ -4,7 +4,6 @@ let
   inherit (lib) mkIf;
   cfg = config.base;
 in {
-  # options.base = { };
 
   config = mkIf cfg.enable {
     nix = {
@@ -28,23 +27,17 @@ in {
       gc = {
         automatic = true;
         dates = "weekly";
-        # keep the last 5 days
         options = "--delete-older-than 5d";
       };
 
-      # add each flake input as a registry
-      # to make nix3 commands consistent with the flake
       registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
 
-      # add nixpkgs input to NIX_PATH
-      # this lets nix2 commands still use <nixpkgs>
       nixPath = [ "nixpkgs=${inputs.nixpkgs.outPath}" ];
     };
 
     nixpkgs = {
       config = {
         allowUnfree = true;
-        #permittedInsecurePackages = [ "electron-25.9.0" ];
         nvidia.acceptLicense = true;
       };
     };

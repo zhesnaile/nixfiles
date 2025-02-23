@@ -8,5 +8,5 @@
     hyprland.enable = false;
     plasma.enable = false;
   };
-  home.packages = with pkgs; [ openconnect ];
+  home.packages = with pkgs; [ ];
 }

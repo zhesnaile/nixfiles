@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # Bootloader.
   boot.loader.systemd-boot.enable = true;
 
   boot.loader.efi.canTouchEfiVariables = true;
@@ -10,7 +9,6 @@
   boot.initrd.systemd.enable = true;
   boot.plymouth.enable = true;
 
-  # Kernel Version
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "kvm-intel" ];
 

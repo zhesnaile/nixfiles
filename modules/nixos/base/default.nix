@@ -55,15 +55,6 @@ in {
 
     time.timeZone = mkDefault cfg.tz;
 
-    # basic packages
-    # sops
-    #sops = let
-    #  isEd25519 = k: k.type == "ed25519";
-    #  getKeyPath = k: k.path;
-    #  keys = builtins.filter isEd25519 config.services.openssh.hostKeys;
-    #in { age.sshKeyPaths = map getKeyPath keys; };
-
-    # defaults
     networking.networkmanager.enable = mkDefault true;
     hardware.enableRedistributableFirmware = mkDefault true;
     services.btrfs.autoScrub.enable = mkDefault cfg.fs.btrfs;
@@ -88,7 +79,6 @@ in {
     };
 
 
-    # boot config
     boot = {
       loader = {
         systemd-boot = {

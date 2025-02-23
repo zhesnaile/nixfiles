@@ -36,7 +36,6 @@ in {
   config = let inherit (lib) concatStringsSep mkDefault optional;
   in mkIf cfg.enable {
 
-    # desktop apps
     environment.systemPackages = with pkgs;
       [
         neovim
@@ -47,15 +46,12 @@ in {
         cachix
         man-pages
         man-pages-posix
-        # other packages
         fontforge
         via
         vial
       ] ++ cfg.apps;
 
 
-
-    # flatpak config
     services.flatpak = {
       enable = true;
 
@@ -73,7 +69,6 @@ in {
       config = { common.default = "*"; };
     };
 
-    # font config
     fonts = {
       fontconfig = {
         enable = true;
@@ -105,9 +100,7 @@ in {
       ];
     };
 
-    # defaults
     programs = {
-      #adb.enable = mkDefault true;
       dconf.enable = mkDefault true;
       gamemode.enable = true;
       gnupg.agent.enable = true;
@@ -128,7 +121,6 @@ in {
     };
 
     security.rtkit.enable = true;
-    services.pulseaudio.enable = false;
 
     services.pipewire = {
       enable = mkDefault true;
@@ -137,11 +129,6 @@ in {
       pulse.enable = mkDefault true;
     };
 
-    # fix for qt6 plugins
-    # environment.profileRelativeSessionVariables = {
-    #   QT_PLUGIN_PATH = mkDefault [ "/lib/qt-6/plugins" ];
-    # };
-    #
     home-manager =
     let
       home-common = import ../../home-manager;

@@ -4,13 +4,12 @@ let
   cfg = config.desktop;
 in {
   config = mkIf cfg.enable {
-    # Enable syncthing
     services = {
       syncthing = {
           enable = true;
           user = "bali";
-          dataDir = "/home/bali/Documents/syncthing";    # Default folder for new synced folders
-          configDir = "/home/bali/.config/syncthing";   # Folder for Syncthing's settings and keys
+          dataDir = "/home/bali/Documents/syncthing";
+          configDir = "/home/bali/.config/syncthing";
       };
     };
 

@@ -24,8 +24,8 @@
       "com.heroicgameslauncher.hgl"
       "io.dbeaver.DBeaverCommunity"
       "com.spotify.Client"
-      "org.ryujinx.Ryujinx"
       "org.prismlauncher.PrismLauncher"
+      "com.discordapp.Discord"
     ];
   };
 

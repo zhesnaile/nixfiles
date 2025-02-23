@@ -6,7 +6,6 @@ let
 in {
   config = mkIf cfg.enable {
     virtualisation = {
-      # Enable libvirtd
       libvirtd = {
         enable = true;
         qemu.ovmf.enable = true;
@@ -18,7 +17,6 @@ in {
         '';
       };
 
-      # Enable docker
       docker.enable = true;
     };
   };
