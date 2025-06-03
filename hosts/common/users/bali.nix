@@ -29,15 +29,14 @@ in {
       obsidian
       slack
       firefox
-      brave
-      chromium
+      discord
+      ungoogled-chromium
       vscodium
       spotify
       gimp
       mpv
       keepassxc
       kitty
-      ark
       mangohud
       easyeffects
       dolphin-emu
@@ -49,11 +48,8 @@ in {
       jellyfin-media-player
       virt-manager
       calibre
-      rpcs3
       wireshark-qt
       handbrake
-      vbam
-      mgba
       ryujinx
       retroarch-full
     ]
@@ -64,7 +60,6 @@ in {
       fd
       fzf
       ripgrep
-      #cpustat
       tealdeer
       git
       python3
@@ -91,7 +86,6 @@ in {
       rust-analyzer
       nodejs
       pyright
-      #xclip
       wl-clipboard
       p7zip
       unzip
