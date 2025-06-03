@@ -56,7 +56,6 @@ in {
         pyright
         nodePackages.typescript-language-server
         python3Packages.debugpy
-        ruff-lsp
         shfmt
         stylua
         tailwindcss-language-server
