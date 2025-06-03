@@ -90,7 +90,6 @@ in {
           xdo # xdotool
           todoist # todo app client
           yq-go # jq for yaml
-          ventoy # bootable usb creator
           vulnix # nix security checker
           zip # archiver
 
