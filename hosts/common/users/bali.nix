@@ -27,7 +27,6 @@ in {
       ## GUI APPS
       hoppscotch
       obsidian
-      slack
       firefox
       discord
       ungoogled-chromium
@@ -44,14 +43,11 @@ in {
       protonup-qt
       gamescope
       libreoffice-qt
-      remmina
       jellyfin-media-player
       virt-manager
       calibre
       wireshark-qt
       handbrake
-      ryujinx
-      retroarch-full
     ]
     ++
     ## cli apps

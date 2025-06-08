@@ -13,34 +13,32 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  # Setup keyfile
-  boot.initrd.secrets = {
-    "/crypto_keyfile.bin" = null;
-  };
-
-  # Enable swap on luks
-  boot.initrd.luks.devices."luks-b0f6eaaf-cbf3-4cb0-b3ce-fa74a7352c43".device = "/dev/disk/by-uuid/b0f6eaaf-cbf3-4cb0-b3ce-fa74a7352c43";
-  boot.initrd.luks.devices."luks-b0f6eaaf-cbf3-4cb0-b3ce-fa74a7352c43".keyFile = "/crypto_keyfile.bin";
-
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/1c83d559-82a7-4307-bbc6-928dc290558a";
-      fsType = "ext4";
+    { device = "/dev/disk/by-uuid/a59c28d9-651c-4335-9385-5ecae4bfd5a5";
+      fsType = "btrfs";
+      options = [ "subvol=@" ];
     };
 
-  boot.initrd.luks.devices."luks-182dcbab-331e-401d-bd87-4d34ce023bc2".device = "/dev/disk/by-uuid/182dcbab-331e-401d-bd87-4d34ce023bc2";
+  boot.initrd.luks.devices."luks-7bf7b567-977b-41d3-b531-fe1b562e9486".device = "/dev/disk/by-uuid/7bf7b567-977b-41d3-b531-fe1b562e9486";
 
-  fileSystems."/boot/efi" =
-    { device = "/dev/disk/by-uuid/63AC-C95C";
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/54BB-06AF";
       fsType = "vfat";
+      options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/b6ac3c86-8664-46b7-b0c8-5f128f536fc8"; }
+    [ { device = "/dev/disk/by-uuid/45a2f67a-27c3-45d3-9c37-be83702099d9"; }
     ];
 
+  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
+  # (the default) this is the recommended approach. When using systemd-networkd it's
+  # still possible to use this option, but it's recommended to use it in conjunction
+  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp9s0f1.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wlp8s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
