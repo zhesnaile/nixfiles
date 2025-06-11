@@ -52,6 +52,7 @@ in {
     ++
     ## cli apps
     [
+      kubectl
       zsh
       fd
       fzf
