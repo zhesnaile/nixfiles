@@ -27,6 +27,7 @@
       "org.prismlauncher.PrismLauncher"
       "com.discordapp.Discord"
     ];
+    services.sunshine.enable= true;
   };
 
   system.stateVersion = "22.11";
