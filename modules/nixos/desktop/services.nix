@@ -19,10 +19,9 @@ in {
       touchpad.disableWhileTyping = true;
     };
 
-    services.desktopManager.plasma6.enable = true;
-    services.xserver.windowManager.qtile.enable = true;
-    services.displayManager.sddm.enable = true;
-    services.displayManager.defaultSession = "plasma";
+    services.desktopManager.plasma6.enable = mkDefault true;
+    services.displayManager.sddm.enable = mkDefault true;
+    services.displayManager.defaultSession = mkDefault "plasma";
 
     services.udev.packages = with pkgs; [
       via
@@ -38,9 +37,9 @@ in {
 
     };
 
-    hardware.bluetooth.enable = true;
+    hardware.bluetooth.enable = mkDefault true;
 
-    services.printing.enable = false;
+    services.printing.enable = mkDefault false;
 
     networking.firewall = {
       logReversePathDrops = true;
