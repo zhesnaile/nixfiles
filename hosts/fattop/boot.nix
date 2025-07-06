@@ -10,6 +10,6 @@
   boot.initrd.systemd.enable = true;
   boot.plymouth.enable = true;
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
   boot.kernelModules = [ "kvm-intel" ];
 }
