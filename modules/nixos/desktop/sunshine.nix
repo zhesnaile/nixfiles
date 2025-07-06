@@ -5,10 +5,6 @@ let
   cfg = config.desktop;
   sunshineCfg = config.desktop.services.sunshine;
 in {
-  #options.desktop.services.sunshine.enable = mkEnableOption "sunshine";
-
-
-
   config = mkIf (cfg.enable && sunshineCfg.enable) {
     services.sunshine ={
       enable = true;
