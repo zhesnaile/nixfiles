@@ -9,6 +9,7 @@ in {
     ./services.nix
     ./syncthing.nix
     ./virtualisation.nix
+    ./sunshine.nix
   ];
 
   options.desktop = with lib.types; {
@@ -31,6 +32,8 @@ in {
       default = [ ];
       description = "Flatpaks to install";
     };
+
+    services.sunshine.enable = mkEnableOption "sunshine service";
 
   };
   config = let inherit (lib) concatStringsSep mkDefault optional;
