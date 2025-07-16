@@ -69,7 +69,8 @@ in {
       dig
       gh
       xxHash
-      ani-cli
+      platformio
+      esptool
     ]
     ++
     ## dependencies

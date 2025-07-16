@@ -26,6 +26,8 @@ in {
     services.udev.packages = with pkgs; [
       via
       vial
+      platformio-core
+      openocd
     ];
 
     security.rtkit.enable = true;
