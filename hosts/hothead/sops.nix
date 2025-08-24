@@ -8,7 +8,6 @@
   in {
     age.sshKeyPaths = builtins.map getKeyPath keys; 
     defaultSopsFile = ./secrets.yaml;
-    secrets.fastboi_key.path = "/etc/nixos/secrets/fastboi.key";
     secrets.bigboi_key.path = "/etc/nixos/secrets/bigboi.key";
     secrets.smolerboi_key.path = "/etc/nixos/secrets/smolerboi.key";
     secrets.gamelib_key.path = "/etc/nixos/secrets/gamelib.key";
