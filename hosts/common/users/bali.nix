@@ -28,7 +28,6 @@ in {
       hoppscotch
       obsidian
       firefox
-      discord
       ungoogled-chromium
       vscodium
       spotify
@@ -44,6 +43,7 @@ in {
       gamescope
       libreoffice-qt
       jellyfin-media-player
+      jellyfin-mpv-shim
       virt-manager
       calibre
       wireshark-qt
