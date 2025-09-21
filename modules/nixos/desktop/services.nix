@@ -30,6 +30,8 @@ in {
       openocd
     ];
 
+    hardware.keyboard.zsa.enable = true;
+
     security.rtkit.enable = true;
     services.pipewire = {
       enable = true;
