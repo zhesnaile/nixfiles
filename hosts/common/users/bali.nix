@@ -42,7 +42,6 @@ in {
       protonup-qt
       gamescope
       libreoffice-qt
-      jellyfin-media-player
       jellyfin-mpv-shim
       virt-manager
       calibre
@@ -51,6 +50,7 @@ in {
       lsfg-vk
       lsfg-vk-ui
       rpcs3
+      keymapp
     ]
     ++
     ## cli apps
