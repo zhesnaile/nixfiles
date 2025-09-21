@@ -44,7 +44,7 @@ in {
         clang-tools
         deno
         docker-compose-language-service
-        dockerfile-language-server-nodejs
+        dockerfile-language-server
         hadolint
         helm-ls
         lldb

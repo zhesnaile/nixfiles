@@ -138,7 +138,7 @@ in {
       modules = builtins.attrValues home-common;
     in
     {
-      sharedModules = modules ++ [ inputs.plasma-manager.homeManagerModules.plasma-manager ];
+      sharedModules = modules ++ [ inputs.plasma-manager.homeModules.plasma-manager ];
       useGlobalPkgs = true;
     };
   };
