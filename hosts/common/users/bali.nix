@@ -48,6 +48,9 @@ in {
       calibre
       wireshark-qt
       handbrake
+      lsfg-vk
+      lsfg-vk-ui
+      rpcs3
     ]
     ++
     ## cli apps
