@@ -39,6 +39,7 @@ in {
       neovim
       ps_mem
       wget
+      openvpn
     ];
 
   };
