@@ -17,8 +17,7 @@ in {
     fonts.packages = with pkgs; [
       noto-fonts
       noto-fonts-cjk-sans
-      noto-fonts-extra
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       nerd-fonts.fira-mono
       nerd-fonts.hack
       nerd-fonts.inconsolata

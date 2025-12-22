@@ -8,8 +8,6 @@ in {
     virtualisation = {
       libvirtd = {
         enable = true;
-        qemu.ovmf.enable = true;
-        qemu.ovmf.packages = [ pkgs.OVMFFull.fd ];
         qemu.swtpm.enable = true;
         onBoot = "ignore";
         qemu.verbatimConfig = ''
