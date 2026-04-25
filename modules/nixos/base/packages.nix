@@ -6,6 +6,7 @@ in {
   config = mkIf cfg.enable {
     programs.steam = {
       enable = true;
+      gamescopeSession.enable = true;
     };
 
     programs.ssh.startAgent = true;
