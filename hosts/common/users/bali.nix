@@ -25,7 +25,6 @@ in {
     packages = with pkgs; [
       home-manager
       ## GUI APPS
-      hoppscotch
       obsidian
       firefox
       ungoogled-chromium
@@ -41,16 +40,14 @@ in {
       ppsspp-qt
       protonup-qt
       gamescope
-      libreoffice-qt
+      #libreoffice-qt
       jellyfin-mpv-shim
       virt-manager
-      calibre
-      wireshark-qt
-      handbrake
       lsfg-vk
       lsfg-vk-ui
       rpcs3
       keymapp
+      godot
     ]
     ++
     ## cli apps
@@ -72,8 +69,6 @@ in {
       dig
       gh
       xxHash
-      platformio
-      esptool
     ]
     ++
     ## dependencies
