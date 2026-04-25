@@ -42,57 +42,18 @@ in {
     home = {
       packages = with pkgs;
         [
-          comma # install and run programs by sticking a , before them
-          distrobox # nice escape hatch, integrates docker images with my environment
-
           age # encryption
-          atool # work with archives
-          bitwarden-cli # password manager
-          cachix # nix binary cache manager
-          cowsay # ascii art
-          diffsitter # better diff
-          dogdns # better dig
-          dua # better du
-          fd # better find
-          fx # better jq
-          figlet # ascii art
-          ffmpeg # media multitool
-          ffmpegthumbnailer # thumbnailer
-          httpie # better curl
-          lsb-release # get distro info
           manix # nix documentation tool
-          mediainfo # media info
           navi # cheatsheet
-          nil # nix LSP
-          nixd # nix LSP
-          nixfmt-classic # nix formatter
-          # nix-delegate # distributed nix builds transparently
-          #nix-du # du for nix store
-          nix-inspect # see which pkgs are in your PATH
-          packagekit # package helper across distros
-          pfetch # system info
-          playerctl # media player controller
-          # poetry # python package manager
           prettyping # better ping
           p7zip # zip archiver
-          rage # age with rust
-          ranger # file manager
           rclone # cloud storage manager
           rsync # file transfer
-          sd # better sed
           sshfs # mount remote filesystems
           steam-run # run binaries in fhs
-          timer # to help with my ADHD paralysis
-          tokei # count lines of code in project
-          urlencode # url encoder
-          xclip # clipboard manager
           xdg-utils # xdg-open
           xdo # xdotool
-          todoist # todo app client
-          yq-go # jq for yaml
-          vulnix # nix security checker
           zip # archiver
-
           # personal packages
         ] ++ cfg.packages;
 
