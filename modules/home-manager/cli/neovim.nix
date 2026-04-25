@@ -26,7 +26,7 @@ in {
       vimAlias = true;
       vimdiffAlias = true;
 
-      extraLuaConfig = ''
+      initLua = ''
         -- bootstrap lazy.nvim, lazyvim and my plugins
         require('config.lazy')
       '';
@@ -36,31 +36,18 @@ in {
         gcc
         gnumake
         go
-        nixfmt-classic
+        nixfmt
         shellcheck
 
         # language servers & mason binaries
         buf
         clang-tools
-        deno
         docker-compose-language-service
         dockerfile-language-server
-        hadolint
-        helm-ls
-        lldb
-        luajitPackages.jsregexp
         lua-language-server
         rust-analyzer
-        nodePackages.bash-language-server
-        nodePackages.prettier
         pyright
-        nodePackages.typescript-language-server
-        python3Packages.debugpy
-        shfmt
-        stylua
-        tailwindcss-language-server
         yaml-language-server
-        vscode-langservers-extracted
       ];
     };
   };
