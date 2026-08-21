@@ -62,9 +62,10 @@ in {
     services.zfs.autoScrub.enable = mkDefault cfg.fs.zfs;
     services.geoclue2.enable = mkDefault true;
     services.printing.enable = mkDefault false;
+ 
     i18n.defaultLocale = mkDefault "en_US.UTF-8";
     i18n.supportedLocales =
-      mkDefault [ "es_ES.UTF-8/UTF-8" "en_US.UTF-8/UTF-8" ];
+      mkDefault [ "es_ES.UTF-8/UTF-8" "en_US.UTF-8/UTF-8" "ja_JP.UTF-8/UTF-8" ];
 
     i18n.extraLocaleSettings = {
       LC_ADDRESS = "es_ES.UTF-8";
@@ -78,6 +79,8 @@ in {
       LC_TIME = "es_ES.UTF-8";
     };
 
+    i18n.inputMethod.enabled = "ibus";
+    i18n.inputMethod.ibus.engines = with pkgs.ibus-engines; [ anthy ];
 
     boot = {
       loader = {
