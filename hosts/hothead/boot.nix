@@ -9,10 +9,10 @@
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   boot.initrd.systemd.enable = true;
-  boot.plymouth.enable = true;
+  boot.plymouth.enable = lib.mkForce false;
 
 
   # Kernel Version
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "kvm-amd" "amdgpu" ];
 }
