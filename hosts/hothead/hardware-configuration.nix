@@ -5,7 +5,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ehci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" "hid_generic" "uas" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
@@ -44,7 +44,7 @@
     text = ''
     bigboi UUID=38a57ba5-2b3a-4756-91d9-1d4d198f04a9 /etc/nixos/secrets/bigboi.key luks
     smallboi UUID=d5d794c9-5aed-49ea-9816-11bc66628679 /etc/nixos/secrets/smolerboi.key luks
-    gamelib UUID=929560de-31b3-4958-b310-ed97b3742e15 /etc/nixos/secrets/gamelib.key luks
+    gamelib UUID=27db6b7b-448e-42d8-8dcb-76cc2e428c45 /etc/nixos/secrets/gamelib.key luks
     '';
     };
   system.activationScripts.makeMediaDirs = ''
@@ -65,7 +65,7 @@
 
     "/media/gamelib" = {
       device = "/dev/mapper/gamelib";
-      fsType = "ext4";
+      fsType = "btrfs";
     };
   };
 }
