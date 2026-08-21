@@ -23,7 +23,6 @@
     flatpaks = [
       "com.heroicgameslauncher.hgl"
       "io.dbeaver.DBeaverCommunity"
-      "com.spotify.Client"
       "org.prismlauncher.PrismLauncher"
       "com.discordapp.Discord"
     ];
