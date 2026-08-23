@@ -48,6 +48,7 @@ in {
       rpcs3
       keymapp
       godot
+      darktable
     ]
     ++
     ## cli apps
