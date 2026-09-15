@@ -49,6 +49,7 @@ in {
       keymapp
       godot
       darktable
+      anki
     ]
     ++
     ## cli apps
